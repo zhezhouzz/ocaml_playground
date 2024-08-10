@@ -1,0 +1,6 @@
+(executable
+ (public_name ocaml_playground)
+ (name main)
+ (preprocess (pps ppx_refinement_type))
+ (libraries ocaml_playground)
+)
