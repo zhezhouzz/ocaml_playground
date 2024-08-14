@@ -1,0 +1,8 @@
+(library
+ (name language_design)
+  (modules
+    test1
+  )
+ (preprocess (pps ppx_language_design))
+ (libraries ocaml_playground)
+)

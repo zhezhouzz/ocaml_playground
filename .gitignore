@@ -1,8 +1,10 @@
+*.dump
 *.ocamlformat
 *.annot
 *.cmo
 *.cma
 *.cmi
+*/.cmi
 *.a
 *.o
 *.cmx
