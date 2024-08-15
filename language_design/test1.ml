@@ -10,7 +10,7 @@
 (* [@@deriving fv] *)
 
 let fv_of_list f l = List.concat @@ List.map f l
-let __id (s : string) = [ s ]
+let _singleton_list (s : string) = [ s ]
 
 type lit =
   | LBool of bool
