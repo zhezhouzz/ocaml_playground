@@ -10,11 +10,16 @@
 (* [@@deriving fv] *)
 
 let fv_of_list f l = List.concat @@ List.map f l
+let __id (s : string) = [ s ]
 
 type lit =
-  | LC of int
+  | LBool of bool
+  | LInt of int
   | LVar of (string[@free])
+  | LPair of lit * lit
   | LTu of lit list
   | LTuAcces of lit * int
   | LAppOp of string * lit list
+  | LAppOp' of string * (string[@free]) list
+  | LAppOp'' of string * string list
 [@@deriving fv]
