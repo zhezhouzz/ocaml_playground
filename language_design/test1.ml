@@ -9,7 +9,7 @@
 (*   | AAppOp of ('t, string) typed * ('t, 't lit) typed list *)
 (* [@@deriving fv] *)
 
-let fv_of_list f l = List.concat @@ List.map f l
+let fv_of_list f l = List.concat_map f l
 let _singleton_list (s : string) = [ s ]
 
 type lit =
